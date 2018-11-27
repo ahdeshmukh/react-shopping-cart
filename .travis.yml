@@ -14,7 +14,7 @@ deploy:
     secure: FtIoYCxzyPE4Nj9eSMTwyHtVDEgfJx0NFySY5wCo5Y+e/WuAcTd+11WSZw5QbAIho7J6Hj50JeJeYrFsLBLlkvtVlgjyrZ+bPwv7Mos65DGwJw3fJ+7OhsyzYm7tMfLfckoUDxYZAGqs/Lr2u/8CbtkwfiF0/yME5IN7tnRiNWXhcn7NqaTRvg2/XQEJHe3goQjM3IQiS2AL0ZzbhA30i67d8dW6ARhzpfDEDMz8JxaNTWnycRFOCzMk2v551cp3qSYWT0y7BqVf0X3Vyag2qRwmpnBxr317BmlRWvBGVgFUjzducLC7kXY4XU5MggRJRzexARmhZFm2zDqfeaNYbxZYHQk07l8HadR7VI1muNkgj957FMWApBOEI9HT29RJcFnHqHCZABO4bXtYWO3SVv3GxFuMDdJDobugwgWbCLjRFHQu0TBt6bX1K6rP8pJHcunzghqV+eBQrjJyI4yRp66x52wI/fFfMMx89NtCH8z34t/KrXSWueVLlN4xMgVoSWkNTOfjD3w9K/D+gEODDWEVCWLl7IQ4t1up53KUOoYc1K64bBKpL1bbFBHUzHvS8a3l2uBtGti6hu63j1AbHsq8067TY9zNbeuvV83o5dfjM42KsR5is/yPm2tWorsB1Uho24MZjG73XDfPzj2waPtilGdvBWdgO+K1SLL5Rqs=
   bucket: ad-react-shopping-cart
   local-dir: "build"
-  acl: ''
+  #acl: ''
   on:
     branch: master
   #on:
