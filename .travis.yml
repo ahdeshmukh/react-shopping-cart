@@ -14,6 +14,6 @@ deploy:
     secure: E5WnErrh0uqY5ubiyT/nzjInE7IIsxZ2lampLptlsjzN5CHbSV1wimm6cbIcN0vo3I8wnFolOdpiBcL34G9sUF6JXnxD0g7QYuCt3xb6wupGu7T2p4PR8gYPExPKAgB7OYPYPv0MruzrjDcOmTTM8r63k7PG9J/3Sm97xjwtifFstpzHS5zd9KvvxljxgowSWtHzZsbJ4shaqiH4zjcXDzi7xdgrd9XdObSgZ+5rL2+Z0rEk+XvEo6AMm4Lh+9sMxS2d25zcxcQ4tn5vh6VjT9EGpmp8Ek7HnfxywepDvS5vyYko7LzR+TuwWi1eX/KjtnD0H9Iin5/Ps+FAIwPmFARo2hQ30s4VpFFYsxZCG72tyY1/CcuHrjewwc0Td6U9BXHEgaa6mtUS133vdAdSV/6uBM88X+5Wu8jqctM5NqKODpHh7BK9oPOBx098JBRDqRDIx5kLNOpJ8/ij3msttclt8idLdKna+h0r/1qKBLC1wCp7q0yJ0kSN6zjoyace9kF9L0rEXXmfjoGcJZKQ1SsVKGTB02W3Tz/m5msA/O3Q+Eoc1yznJ7vsW5HM/A0RoL4xCr0d0NTySbNBsfg0yArELKi9B6/FC4YwQjPLHKrR8DprnNUSIYmxdff22JFdebbq5ae8zWwRX4c5OdwPHON2gQUAjm5wyoHo/Azbn90=
   bucket: ad-react-shopping-cart
   local-dir: build
-  acl: ''
+  #acl: ''
   on:
     repo: ahdeshmukh/react-shopping-cart
