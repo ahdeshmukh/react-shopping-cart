@@ -1,22 +1,10 @@
-language: node_js
-node_js:
-  - "stable"
-cache:
-  directories:
-    - node_modules
-script:
-  - npm test
-  - npm run build
 deploy:
   provider: s3
-  access_key_id: AKIAJZTLMHYQNF6YAOZA
+  access_key_id: AKIAJEOEHG6SP35OBSZA
   secret_access_key:
-    secure: FtIoYCxzyPE4Nj9eSMTwyHtVDEgfJx0NFySY5wCo5Y+e/WuAcTd+11WSZw5QbAIho7J6Hj50JeJeYrFsLBLlkvtVlgjyrZ+bPwv7Mos65DGwJw3fJ+7OhsyzYm7tMfLfckoUDxYZAGqs/Lr2u/8CbtkwfiF0/yME5IN7tnRiNWXhcn7NqaTRvg2/XQEJHe3goQjM3IQiS2AL0ZzbhA30i67d8dW6ARhzpfDEDMz8JxaNTWnycRFOCzMk2v551cp3qSYWT0y7BqVf0X3Vyag2qRwmpnBxr317BmlRWvBGVgFUjzducLC7kXY4XU5MggRJRzexARmhZFm2zDqfeaNYbxZYHQk07l8HadR7VI1muNkgj957FMWApBOEI9HT29RJcFnHqHCZABO4bXtYWO3SVv3GxFuMDdJDobugwgWbCLjRFHQu0TBt6bX1K6rP8pJHcunzghqV+eBQrjJyI4yRp66x52wI/fFfMMx89NtCH8z34t/KrXSWueVLlN4xMgVoSWkNTOfjD3w9K/D+gEODDWEVCWLl7IQ4t1up53KUOoYc1K64bBKpL1bbFBHUzHvS8a3l2uBtGti6hu63j1AbHsq8067TY9zNbeuvV83o5dfjM42KsR5is/yPm2tWorsB1Uho24MZjG73XDfPzj2waPtilGdvBWdgO+K1SLL5Rqs=
+    secure: E5WnErrh0uqY5ubiyT/nzjInE7IIsxZ2lampLptlsjzN5CHbSV1wimm6cbIcN0vo3I8wnFolOdpiBcL34G9sUF6JXnxD0g7QYuCt3xb6wupGu7T2p4PR8gYPExPKAgB7OYPYPv0MruzrjDcOmTTM8r63k7PG9J/3Sm97xjwtifFstpzHS5zd9KvvxljxgowSWtHzZsbJ4shaqiH4zjcXDzi7xdgrd9XdObSgZ+5rL2+Z0rEk+XvEo6AMm4Lh+9sMxS2d25zcxcQ4tn5vh6VjT9EGpmp8Ek7HnfxywepDvS5vyYko7LzR+TuwWi1eX/KjtnD0H9Iin5/Ps+FAIwPmFARo2hQ30s4VpFFYsxZCG72tyY1/CcuHrjewwc0Td6U9BXHEgaa6mtUS133vdAdSV/6uBM88X+5Wu8jqctM5NqKODpHh7BK9oPOBx098JBRDqRDIx5kLNOpJ8/ij3msttclt8idLdKna+h0r/1qKBLC1wCp7q0yJ0kSN6zjoyace9kF9L0rEXXmfjoGcJZKQ1SsVKGTB02W3Tz/m5msA/O3Q+Eoc1yznJ7vsW5HM/A0RoL4xCr0d0NTySbNBsfg0yArELKi9B6/FC4YwQjPLHKrR8DprnNUSIYmxdff22JFdebbq5ae8zWwRX4c5OdwPHON2gQUAjm5wyoHo/Azbn90=
   bucket: ad-react-shopping-cart
-  local_dir: build
-  skip_cleanup: true
-  #acl: ''
+  local-dir: build
+  acl: ''
   on:
-    branch: master
-  #on:
-  #  repo: ahdeshmukh/react-shopping-cart
+    repo: ahdeshmukh/react-shopping-cart
