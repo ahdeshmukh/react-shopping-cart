@@ -7,7 +7,7 @@ cache:
 script:
   - npm test
   - npm run build
-deploy123:
+deploy:
   provider: s3
   access_key_id: AKIAJEOEHG6SP35OBSZA
   secret_access_key:

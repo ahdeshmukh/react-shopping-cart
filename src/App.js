@@ -18,7 +18,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React travis test - cloudfront - 123 - deploy123
+            Learn React travis test - cloudfront - 123 - deploy123 does not work
           </a>
         </header>
       </div>
