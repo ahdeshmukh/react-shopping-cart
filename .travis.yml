@@ -20,4 +20,3 @@ deploy:
     branch: master
   #on:
   #  repo: ahdeshmukh/react-shopping-cart
-  #
