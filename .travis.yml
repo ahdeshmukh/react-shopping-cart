@@ -18,6 +18,7 @@ deploy:
   #acl: ''
   on:
     repo: ahdeshmukh/react-shopping-cart
+    branch: master
 after_deploy:
   - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id E2A2VKZOQ8XTDK
+  - aws cloudfront create-invalidation --distribution-id E2A2VKZOQ8XTDK --paths "/*"
