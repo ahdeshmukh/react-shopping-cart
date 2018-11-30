@@ -20,6 +20,7 @@ deploy:
   on:
     repo: ahdeshmukh/react-shopping-cart
     branch: master
+    condition: $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+
 after_deploy:
   - aws configure set preview.cloudfront true
-  - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  - test $TRAVIS_BRANCH = "master" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+ && aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
