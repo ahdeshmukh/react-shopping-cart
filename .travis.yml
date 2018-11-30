@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "stable"
+install:
+  - npm install -g travis-ci-cloudfront-invalidation
+  - npm install
 cache:
   directories:
     - node_modules
@@ -20,5 +23,7 @@ deploy:
     repo: ahdeshmukh/react-shopping-cart
     branch: master
 after_deploy:
-  - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id E2A2VKZOQ8XTDK --paths "/*"
+  - echo $TRAVIS_BRANCH
+  #- aws configure set preview.cloudfront true
+  #- aws cloudfront create-invalidation --distribution-id E2A2VKZOQ8XTDK --paths "/*"
+  - travis-ci-cloudfront-invalidation -a AKIAIBRONXKAKRYHWEIA -s secure:kAUohlzBZHts3CbEexzqR9Ez8nv1beNaV60EfEe8iRKepFvR5CU2EE/y2/QKNPAFy4DDGVc2sa6mjz4hR42gCbHF82S6RskxvP4NVDh0GVGiFpBAVSgQEQLifJg1hY2j6DycABTUfugoXZ8FuWLXMfizSF/RML3h7AnLUrRx4rHz/XucCIqQnJIu8gBdSoIRwBSAp4RYdZFfNMTUIOghSK8sWRLHD1uGzaHZco72p28GnLhysDoIZTprp+nYhCf3n5jjTnkPdIh4r+HOMiBOOsXcgmW89+vzB+onMUEgPmhJoNCFOL3C9CiLLRw4jXxhDGrsOF2FVMeG8mHJ+TKOzZkEmoQsPbuzqhztzVnxRA8LUBs493HC39w/iSPHWJg2+8vI0cmM4/tWOgnPwK7gY9/VSmuExXvVw/Sed3tiaB1pXP1c8WTSmsXIudIjASJ7XLMfNdHFigdmdXvDtO7Kb1ZE3t9eD6TY4JPzTbijlt28ldvgQAYZk5NIFRpMknv2VltJtDKiBAlTf0ugQ9FHiW8NNnEUXuuF7DBByHkZmjyv5ueCEwnsifYIzTVLG9Wc+VBs2Tq3aHJkxvkKoBc1md85Oz4oCz96Yrn9QYZf0W6fco3CW/wFdPC8ru2rKtmzg2KUEXIY1NV8Bkijxq3PRPFWBydRylfVqdO+7UkBnmM= -c E2A2VKZOQ8XTDK -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
