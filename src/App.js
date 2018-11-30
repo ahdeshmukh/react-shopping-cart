@@ -18,7 +18,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React aws s3 travis test - trying cloudfront invalidation - if you see this then it is SUCCESSFUL - test 5
+            Learn React aws s3 travis test - trying cloudfront invalidation - if you see this then it is SUCCESSFUL - test 6
           </a>
         </header>
       </div>
