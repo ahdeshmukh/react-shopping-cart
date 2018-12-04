@@ -8,7 +8,7 @@ cache:
     - node_modules
 before_script:
   - echo $TRAVIS_TAG
-  - echo git describe --abbrev=0 --tags
+  - echo $(git describe --abbrev=0 --tags)
 script:
   - npm test
   - npm run build
