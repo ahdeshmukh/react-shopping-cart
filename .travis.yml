@@ -10,7 +10,7 @@ before_script:
   - echo $TRAVIS_TAG
   - echo $(git describe --abbrev=0 --tags)
   - bash scripts/deployment/prod.sh
-  - mv src/constants/Config.js.sample src/constants/Config.js
+  #- mv src/constants/Config.js.sample src/constants/Config.js
 script:
   - npm test
   - npm run build
