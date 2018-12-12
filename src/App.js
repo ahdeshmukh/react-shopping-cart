@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { getRestApi, anotherFunction } from './services/GetConstants'
+
 class App extends Component {
   render() {
+    let restApi = getRestApi();
+    let anotherExportVal = anotherFunction();
     return (
       <div className="App">
         <header className="App-header">
@@ -21,6 +25,8 @@ class App extends Component {
             Learn React aws s3 travis test - trying cloudfront invalidation - if you see this then it is SUCCESSFUL - trying tags - 5
           </a>
         </header>
+        <div>{restApi}</div>
+        <div>{anotherExportVal}</div>
       </div>
     );
   }

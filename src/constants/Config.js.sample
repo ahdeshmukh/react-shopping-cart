@@ -1,0 +1,5 @@
+const env = {
+	restApi: 'http://amit-test.local'
+};
+
+export default env;
