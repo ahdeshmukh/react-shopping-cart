@@ -4,7 +4,7 @@
 
 echo "First arg: $1"
 
-REST_API_URL=${DB_URL1}
+REST_API_URL=${DB_URL2}
 
 #REST_API_URL=${DEV_REST_API_URL}
 #
