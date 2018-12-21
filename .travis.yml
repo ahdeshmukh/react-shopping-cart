@@ -1,31 +1,29 @@
 language: node_js
 node_js:
-  - "stable"
-#install:
-#  - pip install --user awscli
+- stable
 cache:
   directories:
-    - node_modules
+  - node_modules
 before_script:
-  - echo $TRAVIS_TAG
-  - echo $(git describe --abbrev=0 --tags)
-  - bash scripts/deploy.sh $TRAVIS_BRANCH
-  #- mv src/constants/Config.js.sample src/constants/Config.js
+- echo $TRAVIS_TAG
+- echo $(git describe --abbrev=0 --tags)
+- bash scripts/deploy.sh $TRAVIS_BRANCH
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
 deploy:
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: $AWS_BUCKET_NAME
-    local-dir: build
-    skip_cleanup: true
-    #acl: ''
-    on:
-      repo: ahdeshmukh/react-shopping-cart
-      branch: master
-      #condition: $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+
+- provider: s3
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  bucket: "$AWS_BUCKET_NAME"
+  local-dir: build
+  skip_cleanup: true
+  on:
+    repo: ahdeshmukh/react-shopping-cart
+    branch: master
 after_deploy:
-  - aws configure set preview.cloudfront true
-  - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+- aws configure set preview.cloudfront true
+- test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id
+  $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+env:
+  secure: Pl5syZayOUrIvZazWdR2BNVmns6LWC8OkRree2VAkW1+6uBq6TXBvTNP7lTcd8I6V/8ixKfaEVjGtKNN/8jxwy3z+1Yx3v8hO/+zRE9RzrxlSgf8x2RIEgFmVcPBsJ80TgJRMoIWkOFUeBueZWZld9FH9HTzsJIjNYymmsU/9Oaye19vrSXIFR83LqXhfxkc1jp108q951iGl1iqae31sxc0/GXGcR9c7DjRnhsT7FEhf8uo90Cpfh/3RsA4Zc/Qo5HzNIP/2yXjx7nHA7R2emq2gQEbDXdFR9DbdjM6Ao6UmHrc+xLTylEBj9naKG7bi+Zm+lvJyR4yCjh9bgyv9SDiR2Ty9PY6dswAlNyZK7X7OaYhACEwkyGtHmA8za8lGtiadtqMERNW1K+HFqykSMd0VyhKKNNjMe9olFqn5+0T3as5VMPHeoPF7bLzo9tOJr7H/WZEDAe037ApRCiqa6AgaOX/sa6NzE6qMnzrZmE1qf5jz6ehYqbyuebZ+Ky+Smw7dLTss4vxI/cCzQwtPHvbj6fsdVdLbR/vNI/LNYVZVXUw5ZGDlOukW1wczjsKqCIF12GwPk8h/9wl21BU3wZwM/FPfIZTZbyXjsWrIKiZTV1RH81JYDY7DM6RVzl90QvivYGVmPV13BeGR1+mV1G2TOGO5CSWlRpKVsVf75g=
