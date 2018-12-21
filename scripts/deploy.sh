@@ -4,15 +4,15 @@
 
 echo "First arg: $1"
 
-#REST_API_URL="${SECRET2}"
+REST_API_URL="${SECRET1} ${SECRET2}"
 
-REST_API_URL=${DEV_REST_API_URL}
+#REST_API_URL=${DEV_REST_API_URL}
 
-if [ "$1" == "master" ]; then
-	REST_API_URL=${PROD_REST_API_URL}
-elif [ "$1" == "stage" ]; then
-	REST_API_URL=${STAGE_REST_API_URL}
-fi
+#if [ "$1" == "master" ]; then
+#	REST_API_URL=${PROD_REST_API_URL}
+#elif [ "$1" == "stage" ]; then
+#	REST_API_URL=${STAGE_REST_API_URL}
+#fi
 
 echo "Rest API URL is "$REST_API_URL
 
