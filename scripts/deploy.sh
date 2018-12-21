@@ -15,5 +15,5 @@ fi
 echo "Rest API URL is "$REST_API_URL
 
 #echo ${PROD_REST_API_URL}
-#sed -i -e 's/REST_API_URL/'$REST_API_URL'/g' src/constants/Config.js.sample
-#mv src/constants/Config.js.sample src/constants/Config.js
+sed -i -e 's/REST_API_URL/'$REST_API_URL'/g' src/constants/Config.js.sample
+mv src/constants/Config.js.sample src/constants/Config.js
