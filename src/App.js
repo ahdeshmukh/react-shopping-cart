@@ -22,7 +22,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React aws s3 travis test - 333
+            Learn React aws s3 travis test - pushing tag
           </a>
         </header>
         <div>{restApi}</div>
